@@ -6,13 +6,18 @@ using TMPro;
 
 public class CountdownTimer : MonoBehaviour
 {
-    [SerializeField]private  float endtime;
+    [SerializeField] private float endtime;
     [SerializeField] private float startingtime;
-
+    [SerializeField] private GameObject car;
     [SerializeField] TextMeshProUGUI countdowntext;
+    [SerializeField] private GameObject WinPanel;
+    
+    [SerializeField] private GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
+        WinPanel.SetActive(false);
         endtime = startingtime;
     }
 
@@ -24,8 +29,19 @@ public class CountdownTimer : MonoBehaviour
 
         if (endtime <= 0)
         {
+            
+            checkgameobject();
             endtime = 0;
         }
-
+        
+    }
+    private void checkgameobject()
+    {
+        if(car.activeSelf)
+        {
+            
+            WinPanel.SetActive(true);
+        }
+       
     }
 }

@@ -798,7 +798,8 @@ MonoBehaviour:
   car: {fileID: 3137528045445194466, guid: 24c424a64dc83bd488dac78c0ee8175a, type: 3}
   countdowntext: {fileID: 1591215113}
   WinPanel: {fileID: 1551084688}
-  explosion: {fileID: 1427962332153456, guid: 11945a8734b8a5a40b095f6d5d136c40, type: 3}
+  enemycar: {fileID: 0}
+  explosion: {fileID: 0}
 --- !u!114 &1129555208
 MonoBehaviour:
   m_ObjectHideFlags: 0

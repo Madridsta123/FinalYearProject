@@ -352,11 +352,11 @@ GameObject:
   - component: {fileID: 6550651635023886196}
   m_Layer: 0
   m_Name: police
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5046593388513349102
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a94761402dcc3478e7bf3158b74320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 5
   rotatingspeed: 8
   target: {fileID: 3137528045445194466, guid: 24c424a64dc83bd488dac78c0ee8175a, type: 3}
   mybody: {fileID: 1699160900554037292}
