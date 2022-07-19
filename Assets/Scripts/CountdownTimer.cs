@@ -14,15 +14,22 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private GameObject WinPanel;
     [SerializeField] private GameObject LosePanel;
     [SerializeField] private GameObject explosion;
-
+   
     private void Awake()
     {
+       /*Se[] scenes = SceneManager.GetAllScenes();
+
+        foreach(Scene sc in scenes)
+        {
+            startingtime--;
+        }*/
+
         if (SceneManager.GetActiveScene().name == "Level1")
         {
             startingtime = 10f;
         }
 
-        if (SceneManager.GetActiveScene().name=="TEST")
+     else if (SceneManager.GetActiveScene().name=="TEST")
         {
             startingtime = 5f;
         }
