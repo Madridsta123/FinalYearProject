@@ -364,7 +364,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5567233496870295380}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.08, y: -2.2099996, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -425,6 +425,7 @@ MonoBehaviour:
   mybody: {fileID: 1699160900554037292}
   cash: {fileID: 0}
   explosion: {fileID: 1427962332153456, guid: 11945a8734b8a5a40b095f6d5d136c40, type: 3}
+  LosePanel: {fileID: 0}
 --- !u!1 &7044643993297418808
 GameObject:
   m_ObjectHideFlags: 0

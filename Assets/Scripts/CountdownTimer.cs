@@ -11,14 +11,22 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private GameObject car;
     [SerializeField] TextMeshProUGUI countdowntext;
     [SerializeField] private GameObject WinPanel;
-    
+    [SerializeField] private GameObject LosePanel;
     [SerializeField] private GameObject explosion;
 
+    private void Awake()
+    {
+        
+        startingtime = 150f;
+    }
     // Start is called before the first frame update
     void Start()
     {
         WinPanel.SetActive(false);
+        LosePanel.SetActive(false);
         endtime = startingtime;
+       
+
     }
 
     // Update is called once per frame

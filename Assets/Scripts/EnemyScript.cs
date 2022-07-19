@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField]
@@ -10,9 +11,12 @@ public class EnemyScript : MonoBehaviour
     public Rigidbody mybody;
     public GameObject cash;
     public GameObject explosion;
+    public GameObject LosePanel;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         mybody = GetComponent<Rigidbody>();
     }
 
@@ -41,6 +45,9 @@ public class EnemyScript : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            LosePanel.SetActive(true);
+                
+
         }
         //When Collides with tower
         if(collision.gameObject.CompareTag("Tower"))
