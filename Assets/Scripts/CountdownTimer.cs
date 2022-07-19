@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -16,8 +17,16 @@ public class CountdownTimer : MonoBehaviour
 
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            startingtime = 10f;
+        }
+
+        if (SceneManager.GetActiveScene().name=="TEST")
+        {
+            startingtime = 5f;
+        }
         
-        startingtime = 150f;
     }
     // Start is called before the first frame update
     void Start()
@@ -49,7 +58,15 @@ public class CountdownTimer : MonoBehaviour
         {
             
             WinPanel.SetActive(true);
+            StartCoroutine(LoadNextScene());
         }
        
     }
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Test");
+
+    }
+    
 }
