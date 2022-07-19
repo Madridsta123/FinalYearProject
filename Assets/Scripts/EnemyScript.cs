@@ -53,6 +53,7 @@ public class EnemyScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Tower"))
         {
             Destroy(gameObject);
+            
         }
        //When one enemy collides with another enemy
         if(collision.gameObject.CompareTag("Enemy"))
@@ -60,6 +61,7 @@ public class EnemyScript : MonoBehaviour
             
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            
         }
     }
 }
