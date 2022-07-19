@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endtime: 0
   startingtime: 10
-  car: {fileID: 3137528045445194466, guid: 24c424a64dc83bd488dac78c0ee8175a, type: 3}
+  car: {fileID: 919132147604266802}
   countdowntext: {fileID: 1591215113}
   WinPanel: {fileID: 1551084688}
   LosePanel: {fileID: 5289428438606706610}
@@ -1266,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1551084689
 MonoBehaviour:
   m_ObjectHideFlags: 0

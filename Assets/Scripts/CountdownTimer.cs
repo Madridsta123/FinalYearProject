@@ -54,19 +54,22 @@ public class CountdownTimer : MonoBehaviour
         if (endtime <= 0)
         {
             
-            checkgameobject();
+           checkgameobject();
             endtime = 0;
         }
         
     }
     private void checkgameobject()
     {
-        if(car.activeSelf)
-        {
-            
+        if (car != null) {
             WinPanel.SetActive(true);
             StartCoroutine(LoadNextScene());
         }
+        //if(car.activeSelf)
+        //{          
+            
+        //}
+       
        
     }
     IEnumerator LoadNextScene()
