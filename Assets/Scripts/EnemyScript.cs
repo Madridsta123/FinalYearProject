@@ -52,6 +52,7 @@ public class EnemyScript : MonoBehaviour
         //When Collides with tower
         if(collision.gameObject.CompareTag("Tower"))
         {
+            Instantiate(explosion, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
             Destroy(gameObject);
             
         }
