@@ -255,9 +255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98158ab2fe07b8547bdf3abe834438a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationspeed: 0
+  rotationspeed: 8
   speed: 15
+  target: {fileID: 0}
+  explosion: {fileID: 0}
   mybody: {fileID: 7511556262045187654}
+  LosePanel: {fileID: 0}
 --- !u!1 &3339736072331201343
 GameObject:
   m_ObjectHideFlags: 0

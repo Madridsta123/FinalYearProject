@@ -23,8 +23,24 @@ public class CarMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        mybody.velocity = transform.forward * speed;
+        mybody.velocity = transform.forward * speed ;
+      
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            float x = Input.mousePosition.x;
+
+           if(x<Screen.width/2&& x>0)
+            {
+                MoveLeft();
+            }
+            if (x > Screen.width / 2 && x < 0)
+            {
+                MoveLeft();
+            }
+        }
     }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Tower"))
@@ -33,6 +49,20 @@ public class CarMovement : MonoBehaviour
             target.SetActive(false);
             LosePanel.SetActive(true);
         }
+    }
+    void MoveLeft()
+    {
+        Vector3 point = transform.position;
+        point.Normalize();
+        float value = Vector3.Cross(point, transform.forward).y;
+        mybody.angularVelocity = rotationspeed * value * new Vector3(0, -1, 0);
+    }
+    void MoveRight()
+    {
+        Vector3 point = transform.position;
+        point.Normalize();
+        float value = Vector3.Cross(point, transform.forward).y;
+        mybody.angularVelocity = rotationspeed * value * new Vector3(0, 1, 0);
     }
 }
 
