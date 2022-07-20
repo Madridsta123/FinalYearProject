@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationspeed: 0
-  speed: 0
+  speed: 15
   mybody: {fileID: 7511556262045187654}
 --- !u!1 &3339736072331201343
 GameObject:
