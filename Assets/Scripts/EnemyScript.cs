@@ -43,7 +43,7 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Instantiate(explosion, transform.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
-            Destroy(collision.gameObject);
+            target.SetActive(false);
             Destroy(gameObject);
             LosePanel.SetActive(true);
                 
